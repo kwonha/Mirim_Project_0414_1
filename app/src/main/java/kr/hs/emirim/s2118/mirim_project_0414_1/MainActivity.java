@@ -27,7 +27,17 @@ public class MainActivity extends AppCompatActivity {
         checkStart = findViewById(R.id.check_start);
         imgv = findViewById(R.id.imgv);
         checkStart.setOnCheckedChangeListener(checkListener);
+        Button btnFinish = findViewById(R.id.btn_finish);
+        btnFinish.setOnClickListener(btnListener);
     }
+    View.OnClickListener btnListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View viwe){
+            finish();
+        }
+    };
+
+
     RadioGroup.OnCheckedChangeListener rgListener = new RadioGroup.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup radioGroup, int selectedId) {
